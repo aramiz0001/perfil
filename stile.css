@@ -1,0 +1,121 @@
+
+.main-background {
+    background-color: #5d986a; 
+    padding: 40px;
+}
+
+
+.header {
+    background-color: white;
+    padding: 10px 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    width: fit-content; 
+    margin-left: auto;
+    margin-right: auto;
+}
+.header h1 {
+    font-size: 1.2em;
+    color: #333;
+    font-weight: bold;
+    margin: 0;
+}
+
+.profile-cards-container {
+    display: flex;
+    justify-content: center; 
+    gap: 20px; 
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+.profile-card {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px; /* 
+
+
+
+
+
+    
+   
+    
+}
+
+.card-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* El truco del corte curvo blanco en la parte inferior de la imagen */
+.card-img-container:after {
+    content: '';
+    position: absolute;
+    bottom: -50px; /* Ajusta la posición vertical del corte */
+    left: 0;
+    width: 100%;
+    height: 100px; /* Define la altura del corte */
+    background: white;
+    border-radius: 50% / 100px 100px 0 0; /* Esto crea la forma elíptica/curva */
+    transform: scaleX(1.5); /* Estira la curva horizontalmente */
+    z-index: 10; /* Asegura que esté sobre el fondo de la imagen pero debajo del contenido (si hubiese) */
+}
+
+/* Contenido del texto de la tarjeta */
+.card-content {
+    padding: 0 20px 20px;
+    margin-top: -30px; /* Sube el contenido ligeramente sobre la curva */
+    position: relative;
+    z-index: 20;
+}
+
+.card-content h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0 5px;
+}
+
+.card-content .role {
+    font-size: 0.8em;
+    color: #e94b63; /* Color rojo de acento */
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.card-content .description {
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.5;
+}
+
+
+.social-links {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1.1em;
+    color: #5d986a; 
+}
+.social-links span {
+    
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media (max-width: 1000px) {
+    .profile-cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
